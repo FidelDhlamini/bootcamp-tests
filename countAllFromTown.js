@@ -1,11 +1,14 @@
-function countAllFromTown(regNumber){
-    var licencePlates = regNumber.split(',');
-      var fromStellies = [];
-    for(var i=0; i<licencePlates.length;i++){
-     if(licencePlates[i].startsWith('CL')){
-      fromStellies.push(licencePlates[i]);
-    } 
-    }
-    
-    return fromStellies.length;
-    }
+function countAllFromTown(regNumber,town){
+  var licencePlates = regNumber.split(',');
+  var fromStellies=[];
+  for(var i=0; i<licencePlates.length;i++){
+    var plates =licencePlates[i];
+    var licence = plates.trim();
+  if(licence.startsWith(town)){
+   fromStellies.push(licence);
+  }
+ }
+  var numberOfTowns = fromStellies.length
+
+  return numberOfTowns;
+}
