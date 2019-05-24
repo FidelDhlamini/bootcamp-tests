@@ -1,10 +1,12 @@
-describe('The greet function', function(){
+describe('greet', function(){
 
-    it('should greet Daniel correctly', function(){
-        assert.equal('Hello, Daniel', greet('Daniel'));      
+    it('it should greet hello, Daniel', function(){
+        assert.equal(greet("Daniel"), "Hello, Daniel");      
     });
-   
-});
+    it('it should greet hello, Fidel', function(){
+        assert.equal(greet("Fidel"), "Hello, Fidel");      
+    });
+     });
 
 
 
