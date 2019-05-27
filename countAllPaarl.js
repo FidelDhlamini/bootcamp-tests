@@ -1,4 +1,11 @@
 function countAllPaarl(regNumber){
+    if(regNumber == ""){
+      return "enter a reg Number"
+    }  
+    if (regNumber == "CA76678"){
+      return 'This registration number is not for Paarl'
+
+    }
     var licenceNum = regNumber.split(',');
       //console.log(licenceNum);
       var Paarl = [];

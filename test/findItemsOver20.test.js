@@ -11,16 +11,13 @@ describe('The findItemsOver20 function', function(){
     ])
    
     });
-    it('it should return all the products that have a quantity higher than 20', function(){
+    it('it should return an empty array when given items below 20', function(){
         assert.deepEqual(findItemsOver20([
-            {name : 'crayons', qty : 60},
-            {name : 'bread', qty : 30},
-            {name : 'sweet potatoes', qty : 24},
+            {name : 'crayons', qty : 11},
+            {name : 'bread', qty : 18},
+            {name : 'sweet potatoes', qty : 4},
             {name : 'avocados', qty : 3},
-    ]), [{name : 'crayons', qty : 60},
-         {name : 'bread', qty : 30},
-         {name : 'sweet potatoes', qty : 24},
-    ])
+    ]), [])
    
     });
 });
